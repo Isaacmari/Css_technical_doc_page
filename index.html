@@ -1,0 +1,302 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <!-- topic of tech doc page. ! #10/13-->
+        CSS Documentation
+      </header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS_Syntax">CSS Syntax</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS_Selectors">CSS Selectors</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS_Properties">CSS Properties</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS_!important">CSS !important</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS_Functions">CSS Functions</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS_Animations">CSS Animations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>
+          Introduction
+        </header>
+          <p>
+            CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements. It is essentially used to style a web page.
+          </p>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>
+          What you should already know
+        </header>
+        <p>This guide assumes you already have the following basic backgrounds:</p>
+        <p>
+          <ul>
+            <li>A good understanding of HyperText Markup Language (HTML).
+            </li>
+            <li>A general understanding of the Internet and the World Wide Web (WWW).
+            </li>
+            <li>
+              Some coding experience with HTML. If you are new to programming, we recommend you take a look at the legacy responsive Web Design offered by <a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">freeCodeCamp</a> to learn more about HTML and CSS.
+            </li>
+
+          </ul>
+        </p>
+      </section>
+      <section class="main-section" id="What_is_CSS?">
+        <header>
+          What is CSS?
+        </header>
+        <p>
+          CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.
+        </p>
+        <p>
+          CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+        </p>
+        <p>
+          HTML was NEVER intended to contain tags for formatting a web page!. HTML was created to describe the content of a web page, like:
+        </P>
+        <code class="left"> &lt;h1&gt;This is a heading.&lt;/h1&gt; <br>
+          &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        </code>
+        <p>
+          When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+
+          To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+
+          CSS removed the style formatting from the HTML page!
+        </p>
+      </section>
+      <section class="main-section" id="CSS_Syntax">
+        <header>
+          CSS Syntax
+        </header>
+        <p>A CSS rule consists of a selector and a declaration block.</p>
+        <code class="left">h1 { <br>
+            &nbsp;&nbsp;color: blue; <br>
+            &nbsp;&nbsp;font-size: 12px; <br>
+          }
+        </code>
+        <p class="left">
+        The <em>h1</em> is the selector and the <em >color: blue, font-size: 12px;</em> is the declaration.
+        </p>
+        <p>
+          The selector points to the HTML element you want to style.The declaration block contains one or more declarations separated by semicolons.Each declaration includes a CSS property name and a value, separated by a colon.Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+        </p>
+      </section>
+      <section class="main-section" id="CSS_Selectors">
+        <header>
+          CSS Selectors
+        </header>
+        <p>A CSS selector selects the HTML element(s) you want to style. They can be used to "find" (or select) the HTML elements you want to style. We can divide CSS selectors into five categories:</p>
+        <p>
+          <ul>
+            <li>
+              Simple selectors (select elements based on name, id, class)
+            </li>
+            <li>
+              Combinator selectors (select elements based on a specific relationship between them)
+            </li>
+            <li>
+              Pseudo-class selectors (select elements based on a certain state)
+            </li>
+            <li>
+              Pseudo-elements selectors (select and style a part of an element)
+            </li>
+            <li>
+              Attribute selectors (select elements based on an attribute or attribute value)
+            </li>
+          </ul>
+        </p>
+        <p>
+          Some examples of simple selcetors are:
+        </p>
+        <dl>
+          <dt>name:</dt>
+          <dd>
+             <code>  section { }, <br>
+               p {}</code>
+              when there is no symbol placed infront of a tag, then it is an element selector. The element selector selects HTML elements based on the element name.
+          </dd>
+          <dt>id:</dt>
+          <dd>
+            <code>#name { }</code>, the hash symbol (#) before the name is an id selector.
+          </dd>
+          <dt>class:</dt>
+          <dd>
+            <code>.create { }</code>, the period (.) before create is a class selector.
+          </dd>
+        </dl>
+        <p>
+          To learn more about Simple, Combination, Pseudo-class, Pseudo-elements, and Attribute selectors, visit <a href="https://www.w3schools.com/css/css_selectors.asp" target="_blank">W3schools.</a>
+        </p>
+      </section>
+      <section class="main-section" id="CSS_Properties">
+        <header>
+          CSS Properties
+        </header>
+        <p>CSS Properties are used to specify the type of style we want for a targetted HTML element.</p>
+        <p>There are a plethora of CSS properties. We will only go over a few important ones today. They are:</p>
+        <ul>
+          <li>
+            Colors - Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
+          </li>
+          <li>
+            Backgrounds - The CSS background properties are used to add background effects for elements. background is the shorthand for this property.
+          </li>
+          <li>
+            Borders - The CSS border properties allow you to specify the style, width, and color of an element's border.
+          </li>
+          <li>
+            Margins - Margins are used to create space around elements, outside of any defined borders.
+          </li>
+          <li>
+            Padding - Padding is used to create space around an element's content, inside of any defined borders.
+          </li>
+          <li>
+            Height and Width - The CSS height and width properties are used to set the height and width of an element. The CSS max-width and min-width property is used to set the maximum width and minimum width of an element.
+          </li>
+          <li>
+            Box Model - All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+          </li>
+          <li>
+            Fonts - Choosing the right font for your website is important! The right font can create a strong identity for your brand.Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.
+          </li>
+          <li>
+            Position - The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="CSS_!important">
+        <header>
+          CSS !important
+        </header>
+        <p>
+          The !important rule in CSS is used to add more importance to a property/value than normal. In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element regarless of its placement in the CSS document!
+        </p>
+        <p>
+          Lets see an example:
+        </p>
+        <code class="left">
+            #myid { <br>
+            &nbsp;&nbsp;background-color: blue; <br>
+          }   <br><br>
+            .myclass {  <br>
+              background-color: gray;  <br>
+            }  <br><br>
+            p {  <br>
+              background-color: red !important;  <br>
+            } <br>
+        </code>
+        <h3>
+        Example Explained:
+        </h3>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the example above. all three paragraphs will get a red background color, even though the ID selector and the class selector has a higher specificity. The !important rule overrides the background-color property in both cases.
+        </p>
+      </section>
+      <section class="main-section" id="CSS_Functions">
+        <header>
+          CSS Functions
+        </header>
+        <p>
+          CSS functions are used as a value for various CSS properties. They can be inserted where you'd place a value, or in some cases, accompanying another vaklue declaration. Some CSS functions even let you nest other functions within them.
+        </p>
+        <table>
+          <caption>
+            Some examples of CSS Functions are:
+          </caption>
+          <tr>
+            <th class="l">Funcions</th>
+            <th class="r">Description</th>
+          </tr>
+          <tr>
+            <td>attr()</td>
+            <td>Returns the value of an attribute of the selected element</td>
+          </tr>
+          <tr>
+            <td>calc()</td>
+            <td>Allows you to perform calculations to determine CSS property values</td>
+          </tr>
+          <tr>
+            <td>cubic-bezier()</td>
+            <td>Defines a Cubic Bezier curve</td>
+          </tr>
+          <tr>
+            <td>linear-gradient()</td>
+            <td>Creates a linear gradient</td>
+          </tr>
+          <tr>
+            <td>max()</td>
+            <td>Uses the largest value, from a comma-separated list of values, as the property value</td>
+          </tr>
+          <tr>
+            <td>min()</td>
+            <td>Uses the smallest value, from a comma-separated list of values, as the property value</td>
+          </tr>
+          <tr>
+            <td>var()</td>
+            <td>Inserts the value of a custom property</td>
+          </tr>
+        </table>
+      </section>
+      <section class="main-section" id="CSS_Animations">
+        <header>
+          CSS Animations
+        </header>
+        <p>CSS allows animation of HTML elements without using JavaScript or Flash!An animation lets an element gradually change from one style to another. You can change as many CSS properties you want, as many times as you want. To use CSS animation, you must first specify some keyframes for the animation. Keyframes hold what styles the element will have at certain times.</p>
+        <p>Most of the properties that are used for animation include:</p>
+        <p>
+          <ul>
+            <li>@keyframes</li>
+            <li>animation-name</li>
+            <li>animation-duration</li>
+            <li>animation-delay</li>
+            <li>animation-iteration-count</li>
+            <li>animation-direction</li>
+            <li>animation-timing-function</li>
+            <li>animation-fill-mode</li>
+            <li>animation</li>
+          </ul>
+        </p>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>
+          Reference
+        </header>
+        <p>The information and material on this page was extracted from W3chools.</p>
+        <p>Learn more about HTML and CSS from <a href="https://www.w3schools.com/default.asp" target="_blank">W3chools</a> and <a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">freeCodeCamp.</a></p>
+      </section>
+    </main>
+  </body>
+</html>
